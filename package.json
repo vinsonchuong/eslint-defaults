@@ -1,0 +1,34 @@
+{
+  "name": "eslint-defaults",
+  "version": "0.0.1",
+  "description": "Smarter default configuration based on project structure and libraries used",
+  "keywords": [],
+  "homepage": "https://github.com/vinsonchuong/eslint-defaults",
+  "bugs": "https://github.com/vinsonchuong/eslint-defaults/issues",
+  "license": "",
+  "author": "Vinson Chuong <vinsonchuong@gmail.com>",
+  "files": ["dist", "README.md", "LICENSE"],
+  "main": "dist/index.js",
+  "bin": {
+    "eslint": "dist/bin/eslint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinsonchuong/eslint-defaults"
+  },
+  "devDependencies": {
+    "babel": "^5.2.6",
+    "child-process-promise": "^1.0.2",
+    "fs-promise": "^0.3.1",
+    "jasmine-es6": "^0.0.2"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.2.6",
+    "eslint": "^0.20.0",
+    "babel-eslint": "^3.0.1"
+  },
+  "scripts": {
+    "test": "babel-node src/bin/eslint && jasmine-es6",
+    "prepublish": "babel src --out-dir dist"
+  }
+}
