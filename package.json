@@ -26,6 +26,6 @@
   },
   "scripts": {
     "test": "babel-node src/bin/eslint && jasmine-es6",
-    "prepublish": "rm -r dist && babel src --out-dir dist"
+    "prepublish": "rm -rf dist && babel src --out-dir dist"
   }
 }
