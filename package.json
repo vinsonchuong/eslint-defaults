@@ -16,13 +16,13 @@
     "url": "https://github.com/vinsonchuong/eslint-defaults"
   },
   "devDependencies": {
-    "babel": "^5.2.6",
+    "babel": "^5.4.7",
     "jasmine-es6": "^0.0.2"
   },
   "dependencies": {
-    "babel-runtime": "^5.2.6",
-    "eslint": "^0.20.0",
-    "babel-eslint": "^3.0.1"
+    "babel-runtime": "^5.4.7",
+    "eslint": "^0.22.1",
+    "babel-eslint": "^3.1.9"
   },
   "scripts": {
     "test": "babel-node src/bin/eslint && jasmine-es6",
