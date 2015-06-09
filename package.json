@@ -5,7 +5,7 @@
   "keywords": ["eslint", "eslint-plugin"],
   "homepage": "https://github.com/vinsonchuong/eslint-defaults",
   "bugs": "https://github.com/vinsonchuong/eslint-defaults/issues",
-  "license": "",
+  "license": "MIT",
   "author": "Vinson Chuong <vinsonchuong@gmail.com>",
   "files": ["dist", "README.md", "LICENSE"],
   "bin": {
