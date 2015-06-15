@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import path from 'path';
 import {CLIEngine, linter} from 'eslint';
 import PackageJson from '../lib/package_json';
