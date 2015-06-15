@@ -20,7 +20,7 @@
     "test": "eslint && jasmine"
   },
   "dependencies": {
-    "eslint": "^0.22.1",
+    "eslint": "^0.23.0",
     "babel-eslint": "^3.1.15"
   },
   "devDependencies": {
