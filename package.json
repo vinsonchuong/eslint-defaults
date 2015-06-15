@@ -1,6 +1,6 @@
 {
   "name": "eslint-defaults",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Smarter default configuration based on project structure and libraries used",
   "keywords": ["eslint", "eslint-plugin"],
   "homepage": "https://github.com/vinsonchuong/eslint-defaults",
