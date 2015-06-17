@@ -31,5 +31,6 @@ const formatter = cli.getFormatter();
 const report = cli.executeOnFiles(['.']);
 
 if (report.errorCount > 0) {
-  throw formatter(report.results);
+  process.stderr.write(formatter(report.results));
+  process.exit(1);
 }
