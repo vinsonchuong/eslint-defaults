@@ -24,6 +24,17 @@ describe('PackageJson', function() {
       expect(project.dependsOn(/other/)).toBe(false);
     });
 
+    it('searches linkDependencies', function() {
+      const project = new PackageJson({
+        linkDependencies: {
+          'jasmine-plugin': '../jasmine-es6'
+        }
+      });
+      expect(project.dependsOn(/jasmine/)).toBe(true);
+      expect(project.dependsOn(/plugin/)).toBe(true);
+      expect(project.dependsOn(/other/)).toBe(false);
+    });
+
     it('searches peerDependencies', function() {
       const project = new PackageJson({
         peerDependencies: {

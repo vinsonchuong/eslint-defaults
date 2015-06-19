@@ -3,7 +3,9 @@ import path from 'path';
 const dependencyProps = [
   'dependencies',
   'devDependencies',
-  'peerDependencies'
+  'peerDependencies',
+
+  'linkDependencies'
 ];
 
 export default class PackageJson {
