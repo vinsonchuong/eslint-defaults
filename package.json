@@ -2,12 +2,19 @@
   "name": "eslint-defaults",
   "version": "0.0.7",
   "description": "Smarter default configuration based on project structure and libraries used",
-  "keywords": ["eslint", "eslint-plugin"],
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
   "homepage": "https://github.com/vinsonchuong/eslint-defaults",
   "bugs": "https://github.com/vinsonchuong/eslint-defaults/issues",
   "license": "MIT",
   "author": "Vinson Chuong <vinsonchuong@gmail.com>",
-  "files": ["LICENSE", "README.md", "src"],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "src"
+  ],
   "bin": {
     "eslint": "src/bin/eslint.js"
   },
