@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "eslint": "^0.24.0",
-    "babel-eslint": "^3.1.19"
+    "babel-eslint": "^3.1.20"
   },
   "devDependencies": {
     "dist-es6": "^0.0.14",
