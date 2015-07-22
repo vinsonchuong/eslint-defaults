@@ -1,6 +1,6 @@
 {
   "name": "eslint-defaults",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Smarter default configuration based on project structure and libraries used",
   "keywords": [
     "eslint",
@@ -31,7 +31,7 @@
     "babel-eslint": "^3.1.25"
   },
   "devDependencies": {
-    "dist-es6": "^0.0.14",
-    "jasmine-es6": "^0.0.14"
+    "dist-es6": "^0.0.16",
+    "jasmine-es6": "^0.0.16"
   }
 }
