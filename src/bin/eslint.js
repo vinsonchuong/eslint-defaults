@@ -19,7 +19,7 @@ const options = {
     }),
     rules: Object.assign(baseConfig.rules, {
       strict: 0,
-      quotes: [2, 'single'],
+      quotes: [2, 'single', 'avoid-escape'],
       'no-process-exit': 0
     })
   }),
