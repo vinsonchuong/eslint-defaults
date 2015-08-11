@@ -6,25 +6,36 @@ const project = PackageJson.load();
 const baseConfig = linter.defaults();
 
 const options = {
-  envs: [
-    'es6',
-    'browser',
-    'worker',
-    'serviceworker',
-    'node',
-    project.dependsOn(/jasmine/) && 'jasmine'
-  ].filter(Boolean),
   ignorePath: path.resolve('.gitignore'),
   baseConfig: Object.assign({}, baseConfig, {
     parser: 'babel-eslint',
+    plugins: [
+      'babel'
+    ],
     ecmaFeatures: Object.assign({}, baseConfig.ecmaFeatures, {
-      modules: true
+      // modules: true
+    }),
+    env: {
+      es6: true,
+      browser: true,
+      worker: true,
+      serviceworker: true,
+      node: true,
+      jasmine: project.dependsOn(/jasmine/)
+    },
+    rules: Object.assign({}, baseConfig.rules, {
+      strict: 0,
+      quotes: [2, 'single', 'avoid-escape'],
+      'no-process-exit': 0,
+
+      'generator-star-spacing': 0,
+      'new-cap': 0,
+      'object-shorthand': 0,
+
+      'babel/new-cap': 2,
+      'babel/generator-star-spacing': [2, {before: false, after: true}],
+      'babel/object-shorthand': 2
     })
-  }),
-  rules: Object.assign({}, baseConfig.rules, {
-    strict: 0,
-    quotes: [2, 'single', 'avoid-escape'],
-    'no-process-exit': 0
   })
 };
 
