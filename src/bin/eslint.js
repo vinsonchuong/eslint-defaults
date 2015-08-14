@@ -124,7 +124,7 @@ const options = {
 /*0*/ 'strict': [2, 'never'],
 
 /*0*/ 'init-declarations': 2,
-/*0*/ 'no-catch-shadow': 2,
+      'no-catch-shadow': 0,
       'no-delete-var': 2,
 /*0*/ 'no-label-var': 2,
 /*0*/ 'no-shadow-restricted-names': 2,
