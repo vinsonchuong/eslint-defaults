@@ -26,7 +26,6 @@ const options = {
       jasmine: project.dependsOn(/jasmine/)
     },
     rules: Object.assign({}, baseConfig.rules, {
-      // strict: 0,
       // quotes: [2, 'single', 'avoid-escape'],
       // 'no-process-exit': 0,
 
@@ -122,15 +121,28 @@ const options = {
 /*0*/ 'wrap-iife': 2,
 /*0*/ 'yoda': 2,
 
+/*0*/ 'strict': [2, 'never'],
+
+/*0*/ 'init-declarations': 2,
+/*0*/ 'no-catch-shadow': 2,
+      'no-delete-var': 2,
+/*0*/ 'no-label-var': 2,
+/*0*/ 'no-shadow-restricted-names': 2,
+/*0*/ 'no-shadow': 2,
+/*0*/ 'no-undef-init': 2,
+      'no-undef': 2,
+/*0*/ 'no-undefined': 2,
+      'no-unused-vars': 2,
+/*0*/ 'no-use-before-define': 2,
+
+
+
       'no-array-constructor': 0,
       'no-bitwise': 0,
-      'no-catch-shadow': 0,
       'no-class-assign': 0,
       'no-const-assign': 0,
       'no-continue': 0,
-      'no-delete-var': 2,
       'no-inline-comments': 0,
-      'no-label-var': 0,
       'no-lonely-if': 0,
       'no-mixed-requires': [0, false],
       'no-mixed-spaces-and-tabs': [2, false],
@@ -143,20 +155,13 @@ const options = {
       'no-plusplus': 0,
       'no-process-exit': 0,
       'no-restricted-modules': 0,
-      'no-shadow': 0,
-      'no-shadow-restricted-names': 0,
       'no-spaced-func': 0,
       'no-sync': 0,
       'no-ternary': 0,
       'no-trailing-spaces': 0,
       'no-this-before-super': 0,
-      'no-undef': 2,
-      'no-undef-init': 0,
-      'no-undefined': 0,
       'no-underscore-dangle': 0,
       'no-unneeded-ternary': 0,
-      'no-unused-vars': [2, {'vars': 'all', 'args': 'after-used'}],
-      'no-use-before-define': 0,
       'no-var': 0,
 
       'array-bracket-spacing': [0, 'never'],
@@ -177,7 +182,6 @@ const options = {
       'handle-callback-err': 0,
       'id-length': 0,
       'indent': 0,
-      'init-declarations': 0,
       'key-spacing': [0, { 'beforeColon': false, 'afterColon': true }],
       'lines-around-comment': 0,
       'max-depth': [0, 4],
@@ -212,7 +216,6 @@ const options = {
       'space-return-throw-case': 0,
       'space-unary-ops': [0, { 'words': true, 'nonwords': false }],
       'spaced-comment': 0,
-      'strict': 0,
       'wrap-regex': 0
     })
   })
