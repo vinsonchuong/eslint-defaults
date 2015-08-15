@@ -135,6 +135,15 @@ const options = {
       'no-unused-vars': 2,
 /*0*/ 'no-use-before-define': 2,
 
+/*0*/ 'callback-return': 2,
+/*0*/ 'handle-callback-err': [2, '^(?:err|error)'],
+/*0*/ 'no-mixed-requires': 2,
+/*0*/ 'no-new-require': 2,
+/*0*/ 'no-path-concat': 2,
+/*0*/ 'no-process-exit': 2,
+      'no-restricted-modules': 0,
+/*0*/ 'no-sync': 2,
+
 
 
       'no-array-constructor': 0,
@@ -144,19 +153,13 @@ const options = {
       'no-continue': 0,
       'no-inline-comments': 0,
       'no-lonely-if': 0,
-      'no-mixed-requires': [0, false],
       'no-mixed-spaces-and-tabs': [2, false],
       'linebreak-style': [0, 'unix'],
       'no-multiple-empty-lines': [0, {'max': 2}],
       'no-nested-ternary': 0,
       'no-new-object': 0,
-      'no-new-require': 0,
-      'no-path-concat': 0,
       'no-plusplus': 0,
-      'no-process-exit': 0,
-      'no-restricted-modules': 0,
       'no-spaced-func': 0,
-      'no-sync': 0,
       'no-ternary': 0,
       'no-trailing-spaces': 0,
       'no-this-before-super': 0,
@@ -168,7 +171,6 @@ const options = {
       'arrow-parens': 0,
       'arrow-spacing': 0,
       'brace-style': [0, '1tbs'],
-      'callback-return': 0,
       'camelcase': 0,
       'comma-spacing': 0,
       'comma-style': 0,
@@ -179,7 +181,6 @@ const options = {
       'func-names': 0,
       'func-style': [0, 'declaration'],
       'generator-star-spacing': 0,
-      'handle-callback-err': 0,
       'id-length': 0,
       'indent': 0,
       'key-spacing': [0, { 'beforeColon': false, 'afterColon': true }],
@@ -227,5 +228,5 @@ const report = cli.executeOnFiles(['.']);
 
 if (report.errorCount > 0) {
   process.stderr.write(formatter(report.results));
-  process.exit(1);
+  process.exit(1); // eslint-disable-line no-process-exit
 }
