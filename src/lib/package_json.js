@@ -12,8 +12,9 @@ export default class PackageJson {
   static load() {
     try {
       const json = require(path.resolve('package.json'));
+
       return new PackageJson(json);
-    } catch (e) {
+    } catch (error) {
       throw new Error('Please run this from the project root directory');
     }
   }

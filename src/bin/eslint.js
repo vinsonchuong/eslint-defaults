@@ -13,7 +13,7 @@ const options = {
       'babel'
     ],
     ecmaFeatures: Object.assign({}, baseConfig.ecmaFeatures, {
-      // modules: true,
+      modules: true,
       regexYFlag: true,
       regexUFlag: true
     }),
@@ -30,6 +30,7 @@ const options = {
       'babel/new-cap': 2,
       'babel/object-curly-spacing': 2,
       'babel/object-shorthand': 2,
+
       // 'babel/arrow-parens': [2, 'as-needed'],
 
       'comma-dangle': 2,
@@ -159,7 +160,7 @@ const options = {
         allowBlockStart: true
       }],
       'linebreak-style': 2,
-      'max-nested-callbacks': [2, 2],
+      'max-nested-callbacks': [2, 4],
       'new-cap': 0,
       'new-parens': 2,
       'newline-after-var': 2,
@@ -208,7 +209,7 @@ const options = {
       'prefer-const': 2,
       'prefer-spread': 2,
       'prefer-reflect': 2,
-      'require-yield': 2,
+      'require-yield': 2
     })
   })
 };
@@ -219,5 +220,8 @@ const report = cli.executeOnFiles(['.']);
 
 if (report.errorCount > 0) {
   process.stderr.write(formatter(report.results));
-  process.exit(1); // eslint-disable-line no-process-exit
+
+  /* eslint-disable no-process-exit, lines-around-comment */
+  process.exit(1);
+  /* eslint-enable no-process-exit, lines-around-comment */
 }
