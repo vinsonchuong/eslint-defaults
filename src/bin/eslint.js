@@ -30,7 +30,7 @@ const options = {
       'babel/new-cap': 2,
       'babel/object-curly-spacing': 2,
       'babel/object-shorthand': 2,
-      'babel/arrow-parens': [2, 'as-needed'],
+      // 'babel/arrow-parens': [2, 'as-needed'],
 
       'comma-dangle': 2,
       'no-cond-assign': 2,
