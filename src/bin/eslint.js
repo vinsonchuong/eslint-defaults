@@ -158,7 +158,7 @@ const options = {
       'max-nested-callbacks': [2, 4],
       'new-cap': 0,
       'new-parens': 2,
-      'newline-after-var': 2,
+      'newline-after-var': 0,
       'no-array-constructor': 2,
       'no-continue': 0,
       'no-inline-comments': 2,
