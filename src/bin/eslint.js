@@ -216,7 +216,7 @@ const report = cli.executeOnFiles(['.']);
 if (report.errorCount > 0) {
   process.stderr.write(formatter(report.results));
 
-  /* eslint-disable no-process-exit, lines-around-comment */
+  /* eslint-disable */
   process.exit(1);
-  /* eslint-enable no-process-exit, lines-around-comment */
+  /* eslint-enable */
 }
