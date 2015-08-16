@@ -184,7 +184,7 @@ const options = {
       'sort-vars': 0,
       'space-after-keywords': 2,
       'space-before-blocks': 2,
-      'space-before-function-paren': [0, 'never'],
+      'space-before-function-paren': [2, 'never'],
       'space-in-parens': 2,
       'space-infix-ops': [2, {int32Hint: true}],
       'space-return-throw-case': 2,
