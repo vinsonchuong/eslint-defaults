@@ -94,7 +94,7 @@ const options = {
       'no-octal-escape': 2,
       'no-octal': 2,
       'no-param-reassign': [2, {props: true}],
-      'no-process-env': 2,
+      'no-process-env': 0,
       'no-proto': 2,
       'no-redeclare': [2, {builtinGlobals: true}],
       'no-return-assign': 2,
