@@ -114,7 +114,7 @@ const options = {
 
       'strict': [2, 'never'],
 
-      'init-declarations': 2,
+      'init-declarations': 0,
       'no-catch-shadow': 0,
       'no-delete-var': 2,
       'no-label-var': 2,
