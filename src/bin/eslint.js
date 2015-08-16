@@ -194,29 +194,19 @@ const options = {
 /*0*/ 'spaced-comment': 2,
       'wrap-regex': 0
 
-
-
-
-      'no-bitwise': 0,
-      'no-class-assign': 0,
-      'no-const-assign': 0,
-      'no-plusplus': 0,
-      'no-this-before-super': 0,
-      'no-var': 0,
-
-      'arrow-parens': 0,
-      'arrow-spacing': 0,
-      'constructor-super': 0,
-      'generator-star-spacing': 0,
-      'max-depth': [0, 4],
-      'max-len': [0, 80, 4],
-      'max-params': [0, 3],
-      'max-statements': [0, 10],
-      'object-shorthand': 0,
-      'prefer-const': 0,
-      'prefer-spread': 0,
-      'prefer-reflect': 0,
-      'require-yield': 0,
+/*0*/ 'arrow-parens': [2, 'as-needed'],
+/*0*/ 'arrow-spacing': 2,
+/*0*/ 'constructor-super': 2,
+/*0*/ 'generator-star-spacing': [2, 'after'],
+/*0*/ 'no-class-assign': 2,
+/*0*/ 'no-const-assign': 2,
+/*0*/ 'no-this-before-super': 2,
+/*0*/ 'no-var': 2,
+/*0*/ 'object-shorthand': 2,
+/*0*/ 'prefer-const': 2,
+/*0*/ 'prefer-spread': 2,
+/*0*/ 'prefer-reflect': 2,
+/*0*/ 'require-yield': 2,
     })
   })
 };
