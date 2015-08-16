@@ -12,11 +12,6 @@ const options = {
     plugins: [
       'babel'
     ],
-    ecmaFeatures: Object.assign({}, baseConfig.ecmaFeatures, {
-      modules: true,
-      regexYFlag: true,
-      regexUFlag: true
-    }),
     env: {
       es6: true,
       browser: true,
