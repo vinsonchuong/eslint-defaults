@@ -27,12 +27,12 @@
     "test": "eslint && jasmine"
   },
   "dependencies": {
-    "eslint": "^1.9.0",
-    "babel-eslint": "^4.1.5",
-    "eslint-plugin-babel": "^2.1.1"
+    "eslint": "^1.10.3",
+    "babel-eslint": "^5.0.0-beta6",
+    "eslint-plugin-babel": "^3.0.0"
   },
   "devDependencies": {
-    "dist-es6": "^0.0.19",
-    "jasmine-es6": "^0.0.18"
+    "dist-es6": "^0.1.0",
+    "jasmine-es6": "^0.0.19"
   }
 }
