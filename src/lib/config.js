@@ -74,7 +74,7 @@ module.exports = {
     'object-shorthand': 2,
     'one-var-declaration-per-line': 2,
     'operator-assignment': 2,
-    'operator-linebreak': 2,
+    'operator-linebreak': [2, 'after'],
     'padded-blocks': [2, 'never'],
     'prefer-arrow-callback': 2,
     'prefer-const': 2,
