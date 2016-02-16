@@ -91,8 +91,9 @@ describe('eslint', () => {
     const project = new Project();
     await project.write('_eslintrc', {
       parser: 'babel-eslint',
+      plugins: ['babel'],
       rules: {
-        'generator-star-spacing': [2, 'after']
+        'babel/generator-star-spacing': [2, 'after']
       }
     });
     await project.write('index.js', `
@@ -108,12 +109,14 @@ describe('eslint', () => {
     const project = new Project();
     await project.write('_eslintrc', {
       parser: 'babel-eslint',
+      plugins: ['babel'],
       rules: {
-        'object-curly-spacing': 2
+        'babel/object-curly-spacing': 2
       }
     });
     await project.write('index.js', `
       export * from 'fs';
+      export * as fse from 'fs';
     `);
     await project.expectSameOutput('index.js');
   });
@@ -122,8 +125,9 @@ describe('eslint', () => {
     const project = new Project();
     await project.write('_eslintrc', {
       parser: 'babel-eslint',
+      plugins: ['babel'],
       rules: {
-        'object-shorthand': 2
+        'babel/object-shorthand': 2
       }
     });
     await project.write('index.js', `

@@ -70,7 +70,7 @@ module.exports = {
     'no-void': 2,
     'no-warning-comments': 2,
     'no-whitespace-before-property': 2,
-    'object-curly-spacing': 2,
+    'babel/object-curly-spacing': 2,
     'object-shorthand': 2,
     'one-var-declaration-per-line': 2,
     'operator-assignment': 2,
