@@ -75,7 +75,10 @@ module.exports = {
     'one-var-declaration-per-line': 2,
     'operator-assignment': 2,
     'operator-linebreak': [2, 'after'],
-    'padded-blocks': [2, 'never'],
+
+    // 'padded-blocks': [2, 'never'],
+    'padded-blocks': 0,
+
     'prefer-arrow-callback': 2,
     'prefer-const': 2,
     'prefer-reflect': 2,
