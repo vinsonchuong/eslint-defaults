@@ -12,8 +12,20 @@ Smarter default configuration based on project structure and libraries used.
 eslint
 ```
 
+All CLI flags are supported. However, when using `-c` (`--config`), the
+included default configuration will not be used. The defaults can be
+re-included as follows:
+
+```js
+module.exports = {
+  extends: require.resolve('eslint-defaults/lib/config');
+}
+```
+
 No CLI configuration flags are supported, but `.eslintrc` will be used if it
-exists. Files listed in `.gitignore` will be ignored.
+exists.
+
+By default, files and patterns listed in `.gitignore` will not be linted.
 
 ## Development
 ### Getting Started
