@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'accessor-pairs': 2,
     'array-bracket-spacing': 2,
+    'array-callback-return': 0,
     'arrow-body-style': 2,
     'babel/arrow-parens': 2,
     'arrow-spacing': 2,
