@@ -61,8 +61,7 @@ module.exports = {
     'no-throw-literal': 2,
     'no-unneeded-ternary': 2,
 
-    // 'no-use-before-define': 2,
-    'no-use-before-define': 0,
+    'no-use-before-define': 2,
 
     'no-useless-call': 2,
     'no-useless-constructor': 2,
