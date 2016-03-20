@@ -1,5 +1,4 @@
 import * as path from 'path';
-import {childProcess} from 'node-promise-es6';
 import Directory from 'directory-helpers';
 
 const eslintBin = path.resolve('node_modules/eslint/bin/eslint.js');
@@ -148,6 +147,6 @@ describe('eslint', () => {
         debugger;
       `
     });
-    await project.expectSameOutput([], ['--ignore-path', '.gitignore',  '.']);
+    await project.expectSameOutput([], ['--ignore-path', '.gitignore', '.']);
   });
 });
