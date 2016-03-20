@@ -6,24 +6,18 @@ const eslintBin = path.resolve('node_modules/eslint/bin/eslint.js');
 const eslintDefaultsBin = path.resolve('node_modules/.bin/eslint');
 
 class Project extends Directory {
-  async exec(command) {
-    const {stdout, stderr} = await childProcess.exec(`${command} || true`, {
-      cwd: this.path()
-    });
-    return stdout.trim() || stderr.trim();
-  }
-
-  async eslint(args) {
-    return await this.exec(`${eslintBin} -c _eslintrc ${args}`);
-  }
-
-  async eslintDefaults(args) {
-    return await this.exec(`${eslintDefaultsBin} ${args}`);
+  async exec(...args) {
+    try {
+      return await super.exec(...args);
+    } catch ({message}) {
+      return message;
+    }
   }
 
   async expectSameOutput(eslintDefaultArgs, eslintArgs) {
-    const actual = await this.eslintDefaults(eslintDefaultArgs);
-    const expected = await this.eslint(eslintArgs || eslintDefaultArgs);
+    const actual = await this.exec(eslintDefaultsBin, eslintDefaultArgs);
+    const expected = await this.exec(eslintBin,
+      ['-c', '_eslintrc', ...(eslintArgs || eslintDefaultArgs)]);
     expect(actual).toBe(expected);
   }
 }
@@ -35,8 +29,8 @@ describe('eslint', () => {
 
   it('preserves CLI flags', async () => {
     const project = new Project('project');
-    await project.create();
-    await project.expectSameOutput('-h');
+    await project.write({_eslintrc: ''});
+    await project.expectSameOutput(['-h']);
   });
 
   it('can lint ES5', async () => {
@@ -51,7 +45,7 @@ describe('eslint', () => {
         debugger;
       `
     });
-    await project.expectSameOutput('index.js');
+    await project.expectSameOutput(['index.js']);
   });
 
   it('can lint ES.next', async () => {
@@ -65,7 +59,7 @@ describe('eslint', () => {
         path.resolve();
       `
     });
-    await project.expectSameOutput('index.js');
+    await project.expectSameOutput(['index.js']);
   });
 
   it('can lint async functions with generator-star-spacing', async () => {
@@ -85,7 +79,7 @@ describe('eslint', () => {
         run();
       `
     });
-    await project.expectSameOutput('index.js');
+    await project.expectSameOutput(['index.js']);
   });
 
   it('can lint export statements with object-curly-spacing', async () => {
@@ -103,7 +97,7 @@ describe('eslint', () => {
         export * as fse from 'fs';
       `
     });
-    await project.expectSameOutput('index.js');
+    await project.expectSameOutput(['index.js']);
   });
 
   it('can lint object spread with object-shorthand', async () => {
@@ -121,7 +115,7 @@ describe('eslint', () => {
         JSON.stringify({one, two, ...rest});
       `
     });
-    await project.expectSameOutput('index.js');
+    await project.expectSameOutput(['index.js']);
   });
 
   it('defaults to linting the current directory', async () => {
@@ -136,7 +130,7 @@ describe('eslint', () => {
         debugger;
       `
     });
-    await project.expectSameOutput('', 'index.js');
+    await project.expectSameOutput([], ['index.js']);
   });
 
   it('ignores files listed in .gitignore', async () => {
@@ -154,6 +148,6 @@ describe('eslint', () => {
         debugger;
       `
     });
-    await project.expectSameOutput('', '--ignore-path .gitignore .');
+    await project.expectSameOutput([], ['--ignore-path', '.gitignore',  '.']);
   });
 });
