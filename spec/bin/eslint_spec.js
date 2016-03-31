@@ -40,11 +40,11 @@ describe('eslint', () => {
           'no-debugger': 2
         }
       },
-      'index.js': `
+      'src/index.js': `
         debugger;
       `
     });
-    await project.expectSameOutput(['index.js']);
+    await project.expectSameOutput(['src/index.js']);
   });
 
   it('can lint ES.next', async () => {
@@ -53,12 +53,12 @@ describe('eslint', () => {
       '_eslintrc': {
         parser: 'babel-eslint'
       },
-      'index.js': `
+      'src/index.js': `
         import * as path from 'path';
         path.resolve();
       `
     });
-    await project.expectSameOutput(['index.js']);
+    await project.expectSameOutput(['src/index.js']);
   });
 
   it('can lint async functions with generator-star-spacing', async () => {
@@ -71,14 +71,14 @@ describe('eslint', () => {
           'babel/generator-star-spacing': [2, 'after']
         }
       },
-      'index.js': `
+      'src/index.js': `
         async function run() {
           await Promise.resolve(42);
         }
         run();
       `
     });
-    await project.expectSameOutput(['index.js']);
+    await project.expectSameOutput(['src/index.js']);
   });
 
   it('can lint export statements with object-curly-spacing', async () => {
@@ -91,12 +91,12 @@ describe('eslint', () => {
           'babel/object-curly-spacing': 2
         }
       },
-      'index.js': `
+      'src/index.js': `
         export * from 'fs';
         export * as fse from 'fs';
       `
     });
-    await project.expectSameOutput(['index.js']);
+    await project.expectSameOutput(['src/index.js']);
   });
 
   it('can lint object spread with object-shorthand', async () => {
@@ -109,12 +109,12 @@ describe('eslint', () => {
           'babel/object-shorthand': 2
         }
       },
-      'index.js': `
+      'src/index.js': `
         const {one, two, ...rest} = {one: 1, two: 2, three: 3, four: 4};
         JSON.stringify({one, two, ...rest});
       `
     });
-    await project.expectSameOutput(['index.js']);
+    await project.expectSameOutput(['src/index.js']);
   });
 
   it('defaults to linting the current directory', async () => {
@@ -125,11 +125,11 @@ describe('eslint', () => {
           'no-debugger': 2
         }
       },
-      'index.js': `
+      'src/index.js': `
         debugger;
       `
     });
-    await project.expectSameOutput([], ['index.js']);
+    await project.expectSameOutput([], ['src/index.js']);
   });
 
   it('ignores files listed in .gitignore', async () => {
@@ -141,9 +141,9 @@ describe('eslint', () => {
         }
       },
       '.gitignore': `
-        index.js
+        src/index.js
       `,
-      'index.js': `
+      'src/index.js': `
         debugger;
       `
     });
