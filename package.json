@@ -1,6 +1,6 @@
 {
   "name": "eslint-defaults",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Smarter default configuration based on project structure and libraries used",
   "keywords": [
     "eslint",
