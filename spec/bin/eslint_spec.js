@@ -61,7 +61,7 @@ describe('eslint', () => {
     await project.expectSameOutput(['src/index.js']);
   });
 
-  it('can lint async functions with generator-star-spacing', async () => {
+  xit('can lint async functions with generator-star-spacing', async () => {
     const project = new Project('project');
     await project.write({
       '_eslintrc': {
