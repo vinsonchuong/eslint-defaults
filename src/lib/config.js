@@ -87,7 +87,6 @@ module.exports = {
     'quote-props': [2, 'consistent-as-needed'],
     'quotes': [2, 'single', 'avoid-escape'],
     'require-jsdoc': 0,
-    'require-yield': 2,
     'space-infix-ops': [2, {int32Hint: true}],
     'space-in-parens': 2,
     'strict': [2, 'never'],
