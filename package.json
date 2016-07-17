@@ -36,6 +36,6 @@
   "devDependencies": {
     "dist-es6": "^0.2.2",
     "jasmine-es6": "^0.2.1",
-    "directory-helpers": "^0.0.9"
+    "directory-helpers": "^0.1.0"
   }
 }
