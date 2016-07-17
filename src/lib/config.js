@@ -32,11 +32,7 @@ module.exports = {
     'consistent-this': [2, 'self'],
     'dot-location': [2, 'property'],
     'func-names': 2,
-
-    // 'generator-star-spacing': [2, 'after'],
-
     'babel/generator-star-spacing': [2, 'after'],
-
     'global-require': 2,
     'handle-callback-err': [2, '^(?:err|error)'],
     'id-length': [2, {properties: 'never'}],
