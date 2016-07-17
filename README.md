@@ -24,13 +24,6 @@ module.exports = {
 
 By default, files and patterns listed in `.gitignore` will not be linted.
 
-Note that currently, even though ignored directories are not linted, their
-files are still enumerated (see
-[eslint/eslint#5679](https://github.com/eslint/eslint/issues/5679)). Until that
-issue is resolved, `eslint-defaults` will default to enumerating files in the
-`src` and `spec` directories. This behavior can still be overridden by passing
-a list of file paths to the CLI.
-
 ## Development
 ### Getting Started
 The application requires the following external dependencies:

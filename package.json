@@ -28,14 +28,14 @@
     "test": "eslint && jasmine"
   },
   "dependencies": {
-    "eslint": "^2.12.0",
+    "eslint": "^3.1.0",
     "eslint-config-eslint": "^3.0.0",
-    "babel-eslint": "^6.0.4",
-    "eslint-plugin-babel": "^3.2.0"
+    "babel-eslint": "^6.1.2",
+    "eslint-plugin-babel": "^3.3.0"
   },
   "devDependencies": {
-    "dist-es6": "^0.1.18",
-    "jasmine-es6": "^0.1.10",
-    "directory-helpers": "^0.0.8"
+    "dist-es6": "^0.2.1",
+    "jasmine-es6": "^0.2.0",
+    "directory-helpers": "^0.0.9"
   }
 }

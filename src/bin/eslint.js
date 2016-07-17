@@ -7,7 +7,7 @@ if (!cliOptions.config) {
   cliOptions.config = require.resolve('eslint-defaults/lib/config');
 }
 if (cliOptions._.length === 0) {
-  cliOptions._ = ['src', 'spec'];
+  cliOptions._ = ['.'];
 }
 if (!cliOptions.ignorePath) {
   try {
