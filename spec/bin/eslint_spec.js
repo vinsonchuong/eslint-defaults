@@ -28,13 +28,23 @@ describe('eslint', () => {
 
   it('preserves CLI flags', async () => {
     const project = new Project('project');
-    await project.write({_eslintrc: ''});
+    await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
+      '_eslintrc': ''
+    });
     await project.expectSameOutput(['-h']);
   });
 
   it('can lint ES5', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         rules: {
           'no-debugger': 2
@@ -50,6 +60,10 @@ describe('eslint', () => {
   it('can lint ES.next', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         parser: 'babel-eslint'
       },
@@ -64,6 +78,10 @@ describe('eslint', () => {
   it('can lint async functions with generator-star-spacing', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         parser: 'babel-eslint',
         plugins: ['babel'],
@@ -84,6 +102,10 @@ describe('eslint', () => {
   it('can lint export statements with object-curly-spacing', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         parser: 'babel-eslint',
         plugins: ['babel'],
@@ -102,6 +124,10 @@ describe('eslint', () => {
   it('can lint object spread with object-shorthand', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         parser: 'babel-eslint',
         plugins: ['babel'],
@@ -120,6 +146,10 @@ describe('eslint', () => {
   it('defaults to linting the current directory', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         rules: {
           'no-debugger': 2
@@ -135,6 +165,10 @@ describe('eslint', () => {
   it('ignores files listed in .gitignore', async () => {
     const project = new Project('project');
     await project.write({
+      'package.json': {
+        name: 'project',
+        private: true
+      },
       '_eslintrc': {
         rules: {
           'no-debugger': 2
