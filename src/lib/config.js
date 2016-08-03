@@ -49,6 +49,7 @@ module.exports = {
     'no-implicit-coercion': 2,
     'no-implicit-globals': 2,
     'no-inline-comments': 2,
+    'no-invalid-this': 0,
     'no-lonely-if': 2,
     'no-multiple-empty-lines': [2, {max: 1}],
     'no-multi-spaces': [2, {exceptions: {Property: false}}],
