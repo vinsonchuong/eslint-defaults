@@ -1,3 +1,6 @@
+**This package is deprecated and no longer maintained in favor of
+[standard-esnext](https://github.com/vinsonchuong/standard-esnext)**
+
 # eslint-defaults
 [![Build Status](https://travis-ci.org/vinsonchuong/eslint-defaults.svg?branch=master)](https://travis-ci.org/vinsonchuong/eslint-defaults)
 
